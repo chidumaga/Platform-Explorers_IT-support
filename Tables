@@ -1,0 +1,9 @@
+
+#Table	Key Columns	Relationship
+USER	            UserId (PK), FullName, Email, Role, IsActive	Parent of TICKET, COMMENT
+TICKET	          TicketId (PK), TicketRef, Status, Priority, Channel, SLADueDate, SLABreached	Core entity
+SLA_RECORD	      SLAId (PK), TicketId (FK), ResponseTargetHrs, ResolutionTargetHrs, IsBreached	1:1 with TICKET
+CATEGORY	        CategoryId (PK), CategoryName, DefaultPriorityLevel	1:N with TICKET
+TEAM	            TeamId (PK), TeamName, TeamEmail, TeamLeadId (FK)	1:N with TICKET
+TICKET_COMMENT	  CommentId (PK), TicketId (FK), AuthorId (FK), IsInternal	1:N with TICKET
+ATTACHMENT	      AttachmentId (PK), TicketId (FK), FileName, FileType, FileSizeKB	1:N with TICKET
