@@ -1,1 +1,14 @@
+## Acceptance Criteria
 
+Each criterion follows the format: **Given** [context], **When** [action], **Then** [outcome].
+
+| ID | Area | Criterion |
+|---|---|---|
+| AC-01 | Ticket Capture | Given an email arrives at the support inbox, when the flow runs, then a ticket is created in Dataverse within 2 minutes with status "New". |
+| AC-02 | SLA Tracking | Given a ticket is created, when priority is set, then the system calculates and displays the SLA due date (P1=4hr, P2=8hr, P3=24hr, P4=72hr). |
+| AC-03 | SLA Breach Alert | Given a ticket is within 1 hour of SLA breach, when the timer triggers, then an email and Teams notification is sent to the agent and team lead. |
+| AC-04 | Duplicate Prevention | Given a ticket is submitted, when same user + same category is detected within 2 hours, then the potential duplicate is flagged for review. |
+| AC-05 | Role-Based Access | Given a user logs in, when their role is "End User", then they can only see their own tickets. |
+| AC-06 | Self-Service Portal | Given an end user submits a request, when the form is submitted, then a confirmation email is sent within 1 minute with the ticket reference. |
+| AC-07 | Reporting | Given an IT Manager opens the dashboard, when filtered by date range, then SLA compliance %, open/closed counts, and avg resolution time are displayed. |
+| AC-08 | Assignment | Given a ticket has no agent after 30 minutes, when the escalation flow runs, then it is auto-assigned via round-robin to the on-duty agent. |
