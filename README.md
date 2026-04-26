@@ -12,14 +12,12 @@
 - [Power Platform Components](#power-platform-components)
 - [Data Model (ERD)](#data-model-erd)
 - [Business Requirements](#business-requirements)
-- [SLA Priority Matrix](#sla-priority-matrix)
+
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Environment Setup](#environment-setup)
-- [Project Structure](#project-structure)
-- [Relationship Types Reference](#relationship-types-reference)
-- [Contributing](#contributing)
-- [Contact](#contact)
+
+
 
 ---
 
@@ -242,36 +240,4 @@ TechCare_Solution/
 └── TechCare_Solution.zip        # Importable solution package
 ```
 
----
 
-## Relationship Types Reference
-
-| Type | Notation | Meaning | Dataverse Implementation |
-|---|---|---|---|
-| One-to-One | 1:1 | One record in A maps to exactly one record in B | Lookup column with unique constraint |
-| One-to-Many | 1:N | One record in A maps to many records in B | Lookup (FK) column on the child table |
-| Many-to-Many | M:N | Many records in A map to many records in B | Junction table or built-in N:N relationship |
-
----
-
-## Contributing
-
-1. Fork or clone this repository
-2. Create a feature branch: `git checkout -b feature/your-feature-name`
-3. Make your changes and test in a non-production Dataverse environment
-4. Export the updated solution as **unmanaged** for development, **managed** for deployment
-5. Submit a pull request with a clear description of changes and test evidence
-
-> All changes must be validated against the 8 acceptance criteria before a pull request is approved.
-
----
-
-## Contact
-
-| Role | Name | Contact |
-|---|---|---|
-| Project Owner | TechCare IT Manager | it-manager@techcare.com |
-| Power Platform Lead | TechCare IT Team | itsupport@techcare.com |
-| Documentation | TechCare Solutions | techcare.com |
-
----
