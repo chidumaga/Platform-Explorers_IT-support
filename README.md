@@ -10,9 +10,7 @@
 - [Solution Summary](#solution-summary)
 - [Stakeholders & Roles](#stakeholders--roles)
 - [Power Platform Components](#power-platform-components)
-- [Data Model (ERD)](#data-model-erd)
 - [Business Requirements](#business-requirements)
-
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Environment Setup](#environment-setup)
@@ -89,22 +87,6 @@ The TechCare IT Support Ticketing System provides:
 ---
 
 
-```
-
-### Tables at a Glance
-
-| Table | Key Columns | Relationship |
-|---|---|---|
-| `USER` | UserId (PK), FullName, Email, Role, IsActive | Parent of TICKET, COMMENT |
-| `TICKET` | TicketId (PK), TicketRef, Status, Priority, Channel, SLADueDate, SLABreached | Core entity |
-| `SLA_RECORD` | SLAId (PK), TicketId (FK), ResponseTargetHrs, ResolutionTargetHrs, IsBreached | 1:1 with TICKET |
-| `CATEGORY` | CategoryId (PK), CategoryName, DefaultPriorityLevel | 1:N with TICKET |
-| `TEAM` | TeamId (PK), TeamName, TeamEmail, TeamLeadId (FK) | 1:N with TICKET |
-| `TICKET_COMMENT` | CommentId (PK), TicketId (FK), AuthorId (FK), IsInternal | 1:N with TICKET |
-| `ATTACHMENT` | AttachmentId (PK), TicketId (FK), FileName, FileType, FileSizeKB | 1:N with TICKET |
-
----
-
 ## Business Requirements
 
 ### Functional
@@ -128,18 +110,6 @@ The TechCare IT Support Ticketing System provides:
 ---
 
 
----
-
-## SLA Priority Matrix
-
-| Priority | Label | Response Target | Resolution Target | Example Scenario |
-|---|---|---|---|---|
-| P1 | Critical | 1 hour | 4 hours | System outage, complete service failure |
-| P2 | High | 2 hours | 8 hours | Key system slow/degraded, single user blocked |
-| P3 | Medium | 4 hours | 24 hours | Non-urgent issue, workaround available |
-| P4 | Low | 8 hours | 72 hours | General request, how-to question |
-
----
 
 ## Getting Started
 
@@ -191,37 +161,5 @@ Before deploying this solution, ensure you have:
    - Assign `TC – IT Manager` role to managers and team leads
 
 ---
-
-## Project Structure
-
-```
-TechCare_Solution/
-│
-├── DataModel/
-│   ├── Tables/                  # Dataverse table definitions (JSON)
-│   └── Relationships/           # Entity relationship configs
-│
-├── Apps/
-│   ├── ModelDrivenApp/          # Agent desk Power App
-│   └── CanvasApp/               # End-user self-service app
-│
-├── Flows/
-│   ├── TC-Flow-EmailToTicket
-│   ├── TC-Flow-SLABreachAlert
-│   ├── TC-Flow-EscalationAssign
-│   └── TC-Flow-ConfirmationEmail
-│
-├── Reports/
-│   └── TechCare_Dashboard.pbix  # Power BI report file
-│
-├── CopilotStudio/
-│   └── TechCare_Bot/            # Chatbot topic definitions
-│
-├── Docs/
-│   ├── TechCare_PowerPlatform_Solution.docx   # Full solution design document
-│   └── README.md                              # This file
-│
-└── TechCare_Solution.zip        # Importable solution package
-```
 
 
