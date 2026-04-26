@@ -88,23 +88,7 @@ The TechCare IT Support Ticketing System provides:
 
 ---
 
-## Data Model (ERD)
 
-The solution uses **7 Dataverse tables**. All relationships are enforced at the data layer.
-
-```
-USER ──────────────────────┐
-  │  (submits)             │ (assigned to)
-  │ 1:N                    │ 1:N
-  ▼                        ▼
-TICKET ──── 1:1 ──── SLA_RECORD
-  │
-  ├── 1:N ──── TICKET_COMMENT
-  ├── 1:N ──── ATTACHMENT
-  ├── N:1 ──── CATEGORY
-  └── N:1 ──── TEAM
-
-USER ◄──── M:N ────► TEAM
 ```
 
 ### Tables at a Glance
