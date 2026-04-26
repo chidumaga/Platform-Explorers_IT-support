@@ -1,0 +1,5 @@
+##Priority	Label	Response Target	Resolution Target	Example Scenario
+P1	Critical	1 hour	4 hours	System outage, complete service failure
+P2	High	2 hours	8 hours	Key system slow/degraded, single user blocked
+P3	Medium	4 hours	24 hours	Non-urgent issue, workaround available
+P4	Low	8 hours	72 hours	General request, how-to question
