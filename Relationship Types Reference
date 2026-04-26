@@ -1,0 +1,9 @@
+## Relationship Types Reference
+
+| Type | Notation | Meaning | Dataverse Implementation |
+|---|---|---|---|
+| One-to-One | 1:1 | One record in A maps to exactly one record in B | Lookup column with unique constraint |
+| One-to-Many | 1:N | One record in A maps to many records in B | Lookup (FK) column on the child table |
+| Many-to-Many | M:N | Many records in A map to many records in B | Junction table or built-in N:N relationship |
+
+---
