@@ -1,0 +1,27 @@
+TechCare_Solution/
+│
+├── DataModel/
+│   ├── Tables/                  # Dataverse table definitions (JSON)
+│   └── Relationships/           # Entity relationship configs
+│
+├── Apps/
+│   ├── ModelDrivenApp/          # Agent desk Power App
+│   └── CanvasApp/               # End-user self-service app
+│
+├── Flows/
+│   ├── TC-Flow-EmailToTicket
+│   ├── TC-Flow-SLABreachAlert
+│   ├── TC-Flow-EscalationAssign
+│   └── TC-Flow-ConfirmationEmail
+│
+├── Reports/
+│   └── TechCare_Dashboard.pbix  # Power BI report file
+│
+├── CopilotStudio/
+│   └── TechCare_Bot/            # Chatbot topic definitions
+│
+├── Docs/
+│   ├── TechCare_PowerPlatform_Solution.docx   # Full solution design document
+│   └── README.md                              # This file
+│
+└── TechCare_Solution.zip        # Importable solution package
